@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- Mod Name -->
+    <RenHoek_MusicPlayer_ModName>Ren Höek's Music Player</RenHoek_MusicPlayer_ModName>
+    
+    <!-- Player Status -->
+    <RenHoek_MusicPlayer_NoSongPlaying>No song playing</RenHoek_MusicPlayer_NoSongPlaying>
+    <RenHoek_MusicPlayer_WaitingForSong>Waiting for next song...</RenHoek_MusicPlayer_WaitingForSong>
+    <RenHoek_MusicPlayer_InCombat>In Combat</RenHoek_MusicPlayer_InCombat>
+    
+    <!-- Transport Controls -->
+    <RenHoek_MusicPlayer_Play>Play</RenHoek_MusicPlayer_Play>
+    <RenHoek_MusicPlayer_Pause>Pause</RenHoek_MusicPlayer_Pause>
+    <RenHoek_MusicPlayer_Resume>Resume</RenHoek_MusicPlayer_Resume>
+    <RenHoek_MusicPlayer_Next>Next Track</RenHoek_MusicPlayer_Next>
+    <RenHoek_MusicPlayer_Previous>Previous Track</RenHoek_MusicPlayer_Previous>
+    <RenHoek_MusicPlayer_Rewind>Rewind</RenHoek_MusicPlayer_Rewind>
+    <RenHoek_MusicPlayer_TotalStop>Total Stop</RenHoek_MusicPlayer_TotalStop>
+    <RenHoek_MusicPlayer_TotalStopDesc>Stop playback and block automatic song changes until manually resumed</RenHoek_MusicPlayer_TotalStopDesc>
+    
+    <RenHoek_MusicPlayer_NowPlaying>"Now Playing" Notifications</RenHoek_MusicPlayer_NowPlaying>
+    <RenHoek_MusicPlayer_NowPlayingDesc>Show a brief message when a new song starts</RenHoek_MusicPlayer_NowPlayingDesc>
+    
+    <RenHoek_MusicPlayer_PauseWithGame>Pause Music When Game Paused</RenHoek_MusicPlayer_PauseWithGame>
+    <RenHoek_MusicPlayer_PauseWithGameDesc>Music stops when the game is paused and resumes when unpaused</RenHoek_MusicPlayer_PauseWithGameDesc>
+    
+    <RenHoek_MusicPlayer_AutoCollapse>Auto-Collapse Playlist</RenHoek_MusicPlayer_AutoCollapse>
+    <RenHoek_MusicPlayer_AutoCollapseDesc>Automatically collapse the song list after selecting a song</RenHoek_MusicPlayer_AutoCollapseDesc>
+    
+    <RenHoek_MusicPlayer_PausedByGame>Paused (game paused)</RenHoek_MusicPlayer_PausedByGame>
+    
+    <RenHoek_MusicPlayer_OpenSettings>Open Mod Settings</RenHoek_MusicPlayer_OpenSettings>
+    
+    <!-- Widget Controls -->
+    <RenHoek_MusicPlayer_Expand>Show Song List</RenHoek_MusicPlayer_Expand>
+    <RenHoek_MusicPlayer_Collapse>Hide Song List</RenHoek_MusicPlayer_Collapse>
+    <RenHoek_MusicPlayer_ShowControls>Show Controls</RenHoek_MusicPlayer_ShowControls>
+    <RenHoek_MusicPlayer_HideControls>Hide Controls</RenHoek_MusicPlayer_HideControls>
+    <RenHoek_MusicPlayer_Lock>Lock Position</RenHoek_MusicPlayer_Lock>
+    <RenHoek_MusicPlayer_Unlock>Unlock Position</RenHoek_MusicPlayer_Unlock>
+    <RenHoek_MusicPlayer_ResetPosition>Reset Position</RenHoek_MusicPlayer_ResetPosition>
+    
+    <!-- Toggle Button Tooltips -->
+    <RenHoek_MusicPlayer_ShowPlayer>Show Music Player</RenHoek_MusicPlayer_ShowPlayer>
+    <RenHoek_MusicPlayer_HidePlayer>Hide Music Player</RenHoek_MusicPlayer_HidePlayer>
+    
+    <!-- Shuffle -->
+    <RenHoek_MusicPlayer_ShuffleOn>Shuffle: ON</RenHoek_MusicPlayer_ShuffleOn>
+    <RenHoek_MusicPlayer_ShuffleOff>Shuffle: OFF</RenHoek_MusicPlayer_ShuffleOff>
+    
+    <!-- Context Aware -->
+    <RenHoek_MusicPlayer_ContextOn>Context-Aware: ON</RenHoek_MusicPlayer_ContextOn>
+    <RenHoek_MusicPlayer_ContextOff>Context-Aware: OFF</RenHoek_MusicPlayer_ContextOff>
+    
+    <!-- Tooltips -->
+    <RenHoek_MusicPlayer_SongTooltip>Click to play\nRight-click to configure</RenHoek_MusicPlayer_SongTooltip>
+    <RenHoek_MusicPlayer_CurrentSongTooltip>Now Playing</RenHoek_MusicPlayer_CurrentSongTooltip>
+    <RenHoek_MusicPlayer_ConfigureSong>Configure Song</RenHoek_MusicPlayer_ConfigureSong>
+    <RenHoek_MusicPlayer_ClickToSeek>Click to seek</RenHoek_MusicPlayer_ClickToSeek>
+    
+    <!-- Settings: General -->
+    <RenHoek_MusicPlayer_ShuffleMode>Shuffle Mode</RenHoek_MusicPlayer_ShuffleMode>
+    <RenHoek_MusicPlayer_ShuffleModeDesc>Randomize song order instead of playing sequentially</RenHoek_MusicPlayer_ShuffleModeDesc>
+    
+    <RenHoek_MusicPlayer_ContextAware>Context-Aware Music</RenHoek_MusicPlayer_ContextAware>
+    <RenHoek_MusicPlayer_ContextAwareDesc>Automatically switch music based on time of day, season, and combat</RenHoek_MusicPlayer_ContextAwareDesc>
+    
+    <RenHoek_MusicPlayer_IncludeVanilla>Include Vanilla Songs</RenHoek_MusicPlayer_IncludeVanilla>
+    <RenHoek_MusicPlayer_IncludeVanillaDesc>Include RimWorld's default songs in the playlist</RenHoek_MusicPlayer_IncludeVanillaDesc>
+    
+    <RenHoek_MusicPlayer_HidePlayerDesc>Hide the music player widget on the map</RenHoek_MusicPlayer_HidePlayerDesc>
+    
+    <RenHoek_MusicPlayer_ScrollingTitles>Scrolling Titles</RenHoek_MusicPlayer_ScrollingTitles>
+    <RenHoek_MusicPlayer_ScrollingTitlesDesc>Scroll long song titles in the widget</RenHoek_MusicPlayer_ScrollingTitlesDesc>
+    
+    <RenHoek_MusicPlayer_LockOrientation>Lock Widget Orientation</RenHoek_MusicPlayer_LockOrientation>
+    <RenHoek_MusicPlayer_LockOrientationDesc>Prevent the widget from flipping when moved to different screen edges</RenHoek_MusicPlayer_LockOrientationDesc>
+    
+    <!-- Settings: Silence -->
+    <RenHoek_MusicPlayer_SilenceBetweenSongs>Silence Between Songs</RenHoek_MusicPlayer_SilenceBetweenSongs>
+    <RenHoek_MusicPlayer_SilenceDesc>Random pause duration between songs</RenHoek_MusicPlayer_SilenceDesc>
+    <RenHoek_MusicPlayer_MinSeconds>Minimum Silence: {0} seconds</RenHoek_MusicPlayer_MinSeconds>
+    <RenHoek_MusicPlayer_MaxSeconds>Maximum Silence: {0} seconds</RenHoek_MusicPlayer_MaxSeconds>
+    <RenHoek_MusicPlayer_MinMinutes>Minimum Silence: {0} minutes</RenHoek_MusicPlayer_MinMinutes>
+    <RenHoek_MusicPlayer_MaxMinutes>Maximum Silence: {0} minutes</RenHoek_MusicPlayer_MaxMinutes>
+    
+    <!-- Settings: Fade -->
+    <RenHoek_MusicPlayer_NaturalFade>Natural Fade</RenHoek_MusicPlayer_NaturalFade>
+    <RenHoek_MusicPlayer_ForcedFade>Forced Fade</RenHoek_MusicPlayer_ForcedFade>
+    <RenHoek_MusicPlayer_FadeOff>Off</RenHoek_MusicPlayer_FadeOff>
+    <RenHoek_MusicPlayer_FadeSuperFast>Super Fast</RenHoek_MusicPlayer_FadeSuperFast>
+    <RenHoek_MusicPlayer_FadeVeryFast>Very Fast</RenHoek_MusicPlayer_FadeVeryFast>
+    <RenHoek_MusicPlayer_FadeFast>Fast</RenHoek_MusicPlayer_FadeFast>
+    <RenHoek_MusicPlayer_FadeNormal>Normal</RenHoek_MusicPlayer_FadeNormal>
+    <RenHoek_MusicPlayer_FadeSlow>Slow</RenHoek_MusicPlayer_FadeSlow>
+    <RenHoek_MusicPlayer_FadeVerySlow>Very Slow</RenHoek_MusicPlayer_FadeVerySlow>
+    <RenHoek_MusicPlayer_FadeSuperSlow>Super Slow</RenHoek_MusicPlayer_FadeSuperSlow>
+    
+    <!-- Settings: Fonts -->
+    <RenHoek_MusicPlayer_TitleFont>Title Font: {0}</RenHoek_MusicPlayer_TitleFont>
+    <RenHoek_MusicPlayer_TimecodeFont>Timecode Font: {0}</RenHoek_MusicPlayer_TimecodeFont>
+    
+    <!-- Settings: Position -->
+    <RenHoek_MusicPlayer_DefaultPosition>Default Position: {0}</RenHoek_MusicPlayer_DefaultPosition>
+    <RenHoek_MusicPlayer_TopLeft>Top Left</RenHoek_MusicPlayer_TopLeft>
+    <RenHoek_MusicPlayer_TopRight>Top Right</RenHoek_MusicPlayer_TopRight>
+    <RenHoek_MusicPlayer_BottomLeft>Bottom Left</RenHoek_MusicPlayer_BottomLeft>
+    <RenHoek_MusicPlayer_BottomRight>Bottom Right</RenHoek_MusicPlayer_BottomRight>
+    
+    <!-- Settings: Volume -->
+    <RenHoek_MusicPlayer_Volume>Player Volume: {0}%</RenHoek_MusicPlayer_Volume>
+</LanguageData>

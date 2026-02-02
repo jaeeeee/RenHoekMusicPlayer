@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Ren Höek's Music Player</name>
+    <author>Ren Höek</author>
+    <packageId>RenHoek.MusicPlayer</packageId>
+    <supportedVersions>
+        <li>1.4</li>
+        <li>1.5</li>
+        <li>1.6</li>
+    </supportedVersions>
+    <description>
+[h1]🎵 Take Control of Your Colony's Soundtrack[/h1]
+
+Tired of the same vanilla music? Want battle drums during raids and peaceful melodies while farming? [b]Ren Höek's Music Player[/b] gives you complete control over your RimWorld audio experience.
+
+[h2]⚔️ Context-Aware Music System[/h2]
+[list]
+[*][b]Automatic Combat Detection[/b] - Music instantly shifts when hostile pawns appear on the map
+[*][b]Smart Song Tagging[/b] - Tag any song for Day (☀), Night (☽), Winter (❄), or Combat (⚔)
+[*][b]Intelligent Filtering[/b] - Skip and Previous buttons only play context-appropriate songs
+[*][b]Enable Total Stop[/b] - Stop terminates all music events but allows ambience and sound effects
+[*][b]Combat Indicator[/b] - ⚔ icon appears on the widget during hostile encounters
+[/list]
+
+[h2]🎛️ Widget Controls[/h2]
+[list]
+[*][b]Draggable[/b] - Click and drag to position anywhere on screen
+[*][b]Resizable[/b] - Drag corners to scale (1x to 3x), drag edges to adjust width independently
+[*][b]Lockable[/b] - Lock position with ⦿/⦾ button to prevent accidental movement
+[*][b]4 Default Positions[/b] - Bottom Left, Bottom Right (default), Top Left, Top Right
+[*][b]Reset Position[/b] - Button in mod settings to snap back to default corner
+[/list]
+
+[h2]🖱️ Compact Mode[/h2]
+[list]
+[*][b]Minimalist Bar[/b] - Click — to collapse to just a title bar
+[*][b]Compact Buttons[/b] - ☰ (expand) → Play/Pause → Skip → Shuffle
+[*][b]Scrolling Titles[/b] - Long song names marquee-scroll seamlessly in a loop
+[*][b]Full Info on Hover[/b] - Tooltip shows full title, artist, and category
+[/list]
+
+[h2]📋 Expanded Playlist[/h2]
+[list]
+[*][b]Expandable List[/b] - Click ▲/▼ to show/hide your full music library
+[*][b]Auto-Flip Orientation[/b] - Playlist expands upward or downward based on widget position
+[*][b]Lock Orientation[/b] - Option to prevent auto-flip behavior
+[*][b]Search Bar[/b] - Quickly filter songs in large playlists
+[*][b]Auto-Scroll[/b] - Playlist automatically scrolls to the currently playing song
+[*][b]Category Icons[/b] - See each song's tags (☀☽❄⚔) at a glance
+[*][b]Per-Song Settings[/b] - Click + buttons to add/remove context tags on any song
+[*][b]Click to Play[/b] - Select any song directly from the playlist
+[*][b]Resizable Height[/b] - Drag the grab bar to adjust playlist size
+[/list]
+
+[h2]🎚️ Playback Controls[/h2]
+[list]
+[*][b]Previous Track[/b] - ⏮ Jump to previous song (respects context filtering)
+[*][b]Rewind[/b] - ⏪ Skip back in current song
+[*][b]Play/Pause[/b] - ▶/⏸ Toggle playback
+[*][b]Fast Forward[/b] - ⏩ Skip ahead in current song
+[*][b]Next Track[/b] - ⏭ Jump to next song (respects context filtering)
+[*][b]Shuffle Toggle[/b] - ⇄ Random or sequential playback (highlights green when on)
+[*][b]Context Toggle[/b] - ▣/⧉ Enable/disable context-aware filtering
+[*][b]Force Stop[/b] - ⏹ Instantly kills all audio for immediate silence
+[/list]
+
+[h2]📊 Progress &amp; Volume[/h2]
+[list]
+[*][b]Click-to-Seek Progress Bar[/b] - Jump to any point in a song instantly
+[*][b]Timecode Display[/b] - Shows current position and total duration
+[*][b]Vertical Volume Bar[/b] - Click or drag to adjust volume
+[*][b]Status Display[/b] - Shows current state: Playing, Paused, Fading In/Out, Waiting...
+[/list]
+
+[h2]🎚️ 8 Crossfade Speeds[/h2]
+Smooth transitions between songs:
+[list]
+[*]Super Fast (0.2s)
+[*]Very Fast (0.4s)
+[*]Fast (1.0s)
+[*]Normal (1.8s) - Default
+[*]Slow (2.6s)
+[*]Very Slow (3.5s)
+[*]Super Slow (5.0s)
+[*]Off (instant switch)
+[/list]
+
+[h2]⏱️ Silence Between Songs[/h2]
+[list]
+[*][b]Configurable Gaps[/b] - Set minimum and maximum silence (0 seconds to 10 minutes each)
+[*][b]Random Duration[/b] - Each gap is randomly chosen between your min/max
+[*][b]Combat Override[/b] - Silence is automatically skipped during combat
+[*][b]Manual Override[/b] - Skip/Previous buttons bypass silence for instant playback
+[*][b]Continuous Mode[/b] - Set both to 0 for back-to-back songs
+[/list]
+
+[h2]⌨️ Full Keybind Support[/h2]
+Configure hotkeys in [b]Options → Keyboard → Ren Höek's Music Player[/b]:
+[list]
+[*]Play / Pause
+[*]Next Track
+[*]Previous Track
+[*]Show / Hide Player
+[*]Toggle Shuffle
+[*]Toggle Context-Aware Mode
+[/list]
+All keybinds default to unassigned - set your own!
+
+[h2]📁 Easy Music Setup[/h2]
+[list]
+[*][b]Folder-Based Tagging[/b] - Drop MP3/OGG/WAV files into categorized folders:
+  - Combat/ - Battle music
+  - Day/ - Daytime ambiance
+  - Night/ - Nighttime tracks
+  - Winter/ - Cold season music
+[*][b]Auto-Detection[/b] - Songs are automatically tagged based on folder location
+[*][b]Multi-Tag Support[/b] - Place songs in multiple folders for multiple contexts
+[*][b]In-Game Override[/b] - Add or remove tags per-song with the + buttons
+[*][b]Vanilla Music Option[/b] - Optionally include RimWorld's original soundtrack
+[/list]
+
+[h2]🔧 Mod Settings[/h2]
+Access via [b]Options → Mod Settings → Ren Höek's Music Player[/b]:
+
+[b]Left Column:[/b]
+[list]
+[*]Shuffle Mode (default: ON)
+[*]Context-Aware Playback (default: ON)
+[*]Include Vanilla Music (default: OFF) - requires restart
+[*]Hide Player Widget
+[*]Lock Playlist Orientation
+[*]Scrolling Titles (default: ON)
+[*]Enable Total Stop (default: OFF)
+[*]Silence Between Songs - Min/Max sliders (0-600 seconds)
+[/list]
+
+[b]Right Column:[/b]
+[list]
+[*]Fade Speed - 8 options dropdown
+[*]Title Font - 21 font options
+[*]Timecode Font - 21 font options
+[*]Default Position - 4 corner options
+[*]Reset Widget Position button
+[/list]
+
+[h2]🔤 21 Font Options[/h2]
+Customize title and timecode display:
+Calibri, Segoe UI Symbol, Arial, Verdana, Tahoma, Trebuchet MS, Georgia, Times New Roman, Palatino Linotype, Garamond, Century Gothic, Lucida Sans Unicode, Consolas, Courier New, Fixedsys, Segoe UI, Cascadia Code, Franklin Gothic Medium, Bahnschrift, Impact, Comic Sans MS
+
+[h2]✨ Performance &amp; Quality of Life[/h2]
+[list]
+[*][b]Optimized Rendering[/b] - Cached styles, LINQ queries, and text measurements for minimal TPS impact
+[*][b]Persistent Settings[/b] - All preferences saved between sessions
+[*][b]PlaySettings Icon[/b] - Quick access via music note icon in bottom-right button row
+[*][b]Compatible[/b] - Works alongside other mods (only affects music system)
+[/list]
+
+[h2]🌍 Localization Support[/h2]
+[list]
+[*][b]Full Translation Ready[/b] - All UI text uses keyed strings
+[*][b]Easy to Translate[/b] - Add your language in Languages/[YourLanguage]/Keyed/
+[*][b]Community Translations Welcome[/b] - Check the mod folder for the English template
+[/list]
+
+[hr][/hr]
+
+[i]"Your colony deserves a soundtrack as dynamic as its stories."[/i]
+
+[h3]Requires Harmony. Load after it.[/h3]
+
+[hr][/hr]
+
+[h3]Credits[/h3]
+Created by Ren Höek
+Powered by Harmony
+    </description>
+    <modDependencies>
+        <li>
+            <packageId>brrainz.harmony</packageId>
+            <displayName>Harmony</displayName>
+            <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases</downloadUrl>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+        </li>
+    </modDependencies>
+    <loadAfter>
+        <li>brrainz.harmony</li>
+    </loadAfter>
+</ModMetaData>

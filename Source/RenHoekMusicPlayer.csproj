@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>RenHoekMusicPlayer</AssemblyName>
+    <RootNamespace>RenHoek.MusicPlayer</RootNamespace>
+    <LangVersion>8.0</LangVersion>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- RimWorld 1.6 references -->
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" />
+    
+    <!-- Harmony - compile-time only, use game's copy at runtime -->
+    <PackageReference Include="Lib.Harmony" Version="2.4.2">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Key Binding Category -->
+    <KeyBindingCategoryDef>
+        <defName>RenHoekMusicPlayer</defName>
+        <label>Ren Höek's Music Player</label>
+    </KeyBindingCategoryDef>
+
+    <!-- Play/Pause -->
+    <KeyBindingDef>
+        <defName>RenHoekMusic_PlayPause</defName>
+        <label>Play / Pause</label>
+        <category>RenHoekMusicPlayer</category>
+        <defaultKeyCodeA>None</defaultKeyCodeA>
+    </KeyBindingDef>
+
+    <!-- Next Track -->
+    <KeyBindingDef>
+        <defName>RenHoekMusic_NextTrack</defName>
+        <label>Next Track</label>
+        <category>RenHoekMusicPlayer</category>
+        <defaultKeyCodeA>None</defaultKeyCodeA>
+    </KeyBindingDef>
+
+    <!-- Previous Track -->
+    <KeyBindingDef>
+        <defName>RenHoekMusic_PrevTrack</defName>
+        <label>Previous Track</label>
+        <category>RenHoekMusicPlayer</category>
+        <defaultKeyCodeA>None</defaultKeyCodeA>
+    </KeyBindingDef>
+
+    <!-- Toggle Widget Visibility -->
+    <KeyBindingDef>
+        <defName>RenHoekMusic_ToggleWidget</defName>
+        <label>Show / Hide Music Player</label>
+        <category>RenHoekMusicPlayer</category>
+        <defaultKeyCodeA>None</defaultKeyCodeA>
+    </KeyBindingDef>
+
+    <!-- Toggle Shuffle -->
+    <KeyBindingDef>
+        <defName>RenHoekMusic_ToggleShuffle</defName>
+        <label>Toggle Shuffle</label>
+        <category>RenHoekMusicPlayer</category>
+        <defaultKeyCodeA>None</defaultKeyCodeA>
+    </KeyBindingDef>
+
+    <!-- Toggle Context-Aware -->
+    <KeyBindingDef>
+        <defName>RenHoekMusic_ToggleContext</defName>
+        <label>Toggle Context-Aware</label>
+        <category>RenHoekMusicPlayer</category>
+        <defaultKeyCodeA>None</defaultKeyCodeA>
+    </KeyBindingDef>
+</Defs>
