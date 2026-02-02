@@ -259,11 +259,17 @@ namespace RenHoek.MusicPlayer
         {
             PlayNextNaturalWithProgress(0f);
         }
-        
+
         private void PlayNextNaturalWithProgress(float initialProgress)
         {
             if (AllSongs.Count == 0) return;
-            
+
+            // Respect context filtering even when shuffle is off.
+            // GetContextAppropiateSongs() already falls back to AllSongs if context-aware is disabled
+            // (and also falls back if a context filter would produce zero matches).
+            var pool = GetContextAppropiateSongs();
+            if (pool == null || pool.Count == 0) return;
+
             SongInfo nextSong = null;
 
             if (MusicPlayerMod.Settings.ShuffleEnabled)
@@ -271,6 +277,17 @@ namespace RenHoek.MusicPlayer
                 nextSong = GetNextShuffleSong();
             }
             else
+            {
+                int currentIndex = (CurrentSong != null) ? pool.IndexOf(CurrentSong) : -1;
+                int nextIndex = (currentIndex >= 0) ? (currentIndex + 1) % pool.Count : 0;
+                nextSong = pool[nextIndex];
+            }
+
+            if (nextSong != null)
+                StartFadeOutThenPlay(nextSong, isSkip: false, initialProgress: initialProgress);
+        }
+
+else
             {
                 int currentIndex = CurrentSong != null ? AllSongs.IndexOf(CurrentSong) : -1;
                 int nextIndex = (currentIndex + 1) % AllSongs.Count;
@@ -281,30 +298,57 @@ namespace RenHoek.MusicPlayer
         }
 
         // === COMBAT DETECTION ===
+        /// <summary>
+        /// Determine whether the current map is actually in combat.
+        /// Uses real hostile threats when possible, with a conservative fallback for older/edge cases.
+        /// </summary>
+        private bool ComputeInCombat(Map map)
+        {
+            if (map == null) return false;
+
+            // Best signal: does the player currently have any hostile active threats on the map?
+            // This drops to false quickly once threats are gone, which prevents "combat music never ends".
+            // (GenHostility exists in RW 1.4+.)
+            try
+            {
+                return GenHostility.AnyHostileActiveThreatToPlayer(map);
+            }
+            catch
+            {
+                // Fallback: older versions / unexpected API changes
+                bool inCombat = map.dangerWatcher != null &&
+                                map.dangerWatcher.DangerRating >= StoryDanger.High;
+
+                if (!inCombat)
+                {
+                    // Very conservative fallback: a colonist is actively fighting/fleeing
+                    foreach (var pawn in map.mapPawns.FreeColonistsSpawned)
+                    {
+                        var jobDef = pawn.CurJob?.def;
+                        if (jobDef == null) continue;
+
+                        if (jobDef == JobDefOf.AttackMelee ||
+                            jobDef == JobDefOf.AttackStatic ||
+                            jobDef == JobDefOf.FleeAndCower)
+                        {
+                            inCombat = true;
+                            break;
+                        }
+                    }
+                }
+
+                return inCombat;
+            }
+        }
+
         private void UpdateCombatState()
         {
             var map = Find.CurrentMap;
             if (map == null) return;
             
-            // Primary check: DangerWatcher rating
-            bool inCombat = map.dangerWatcher != null && 
-                            map.dangerWatcher.DangerRating >= StoryDanger.High;
-            
-            // Fallback: Check if any colonist is actively in combat (fleeing, attacking, etc.)
-            if (!inCombat)
-            {
-                foreach (var pawn in map.mapPawns.FreeColonistsSpawned)
-                {
-                    if (pawn.CurJob != null && 
-                        (pawn.CurJob.def == JobDefOf.AttackMelee || 
-                         pawn.CurJob.def == JobDefOf.AttackStatic ||
-                         pawn.CurJob.def == JobDefOf.FleeAndCower))
-                    {
-                        inCombat = true;
-                        break;
-                    }
-                }
-            }
+            bool inCombat = ComputeInCombat(map);
+
+
             
             IsInCombat = inCombat;
             
@@ -357,23 +401,9 @@ namespace RenHoek.MusicPlayer
                 return;
             }
             
-            bool inCombat = map.dangerWatcher != null && 
-                            map.dangerWatcher.DangerRating >= StoryDanger.High;
-            
-            if (!inCombat)
-            {
-                foreach (var pawn in map.mapPawns.FreeColonistsSpawned)
-                {
-                    if (pawn.CurJob != null && 
-                        (pawn.CurJob.def == JobDefOf.AttackMelee || 
-                         pawn.CurJob.def == JobDefOf.AttackStatic ||
-                         pawn.CurJob.def == JobDefOf.FleeAndCower))
-                    {
-                        inCombat = true;
-                        break;
-                    }
-                }
-            }
+            bool inCombat = ComputeInCombat(map);
+
+
             
             IsInCombat = inCombat;
             wasInCombat = inCombat;  // Sync both so no transition triggers
@@ -412,7 +442,7 @@ namespace RenHoek.MusicPlayer
             
             if (targetSong != null)
             {
-                StartFadeOutThenPlay(targetSong);
+                StartFadeOutThenPlay(targetSong, isSkip: true);
             }
         }
 
