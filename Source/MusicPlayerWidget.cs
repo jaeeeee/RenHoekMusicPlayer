@@ -156,7 +156,6 @@ namespace RenHoek.MusicPlayer
         // Peaceful messages for silence between songs
         private static string currentPeacefulMessage = null;
         private static readonly string[] PeacefulMessages = {
-            // Original 50
             "A moment of stillness...",
             "The wind whispers...",
             "Peace settles over the colony...",
@@ -207,7 +206,6 @@ namespace RenHoek.MusicPlayer
             "Waiting in the wings...",
             "The next note approaches...",
             "A tender silence...",
-            // New 50
             "The muffalo graze peacefully...",
             "Colonists pause their work...",
             "A moment of gratitude...",
@@ -263,7 +261,6 @@ namespace RenHoek.MusicPlayer
         // Fading messages for transitions
         private static string currentFadingMessage = null;
         private static readonly string[] FadingMessages = {
-            // Original 50
             "Transitioning vibes...",
             "Hold please...",
             "Swapping tunes...",
@@ -314,7 +311,6 @@ namespace RenHoek.MusicPlayer
             "Growing: Sick beats...",
             "Butchering: Old track...",
             "The muffalo approves...",
-            // New 50
             "Chemfuel-powered transition...",
             "Acquiring new audio assets...",
             "Component: Music (1)...",
