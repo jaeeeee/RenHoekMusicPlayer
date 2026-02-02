@@ -287,16 +287,6 @@ namespace RenHoek.MusicPlayer
                 StartFadeOutThenPlay(nextSong, isSkip: false, initialProgress: initialProgress);
         }
 
-else
-            {
-                int currentIndex = CurrentSong != null ? AllSongs.IndexOf(CurrentSong) : -1;
-                int nextIndex = (currentIndex + 1) % AllSongs.Count;
-                nextSong = AllSongs[nextIndex];
-            }
-            
-            if (nextSong != null) StartFadeOutThenPlay(nextSong, isSkip: false, initialProgress: initialProgress);
-        }
-
         // === COMBAT DETECTION ===
         /// <summary>
         /// Determine whether the current map is actually in combat.
@@ -939,7 +929,7 @@ else
             var map = Find.CurrentMap;
             if (map == null) return true;
 
-            bool inCombat = map.dangerWatcher != null && map.dangerWatcher.DangerRating >= StoryDanger.High;
+            bool inCombat = ComputeInCombat(map);
             if (inCombat && settings.AllowCombat) return true;
             if (inCombat && !settings.AllowCombat) return false;
 
