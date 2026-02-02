@@ -1,4 +1,4 @@
-# Ren Hoek's Music Player
+# Ren Höek's Music Player
 
 **Video first (shows the whole UI + behavior):**  
 https://www.youtube.com/watch?v=CflR2c4KIJ0
