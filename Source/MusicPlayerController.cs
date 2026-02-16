@@ -65,6 +65,7 @@ namespace RenHoek.MusicPlayer
         private bool wasInCombat = false;
         private int nextCombatCheckTick = 0;
         private bool eventTriggersBlocked = false;
+        public bool ManuallyStopped { get; private set; } = false;  // Blocks vanilla auto-start after Stop
         public bool PausedDueToGamePause { get; private set; } = false;
         private bool isSkipTransition = false;  // True if skip/prev triggered this fade
         
@@ -721,6 +722,7 @@ namespace RenHoek.MusicPlayer
             
             // User manually playing - unblock event triggers
             eventTriggersBlocked = false;
+            ManuallyStopped = false;
             
             // Cancel any ongoing fade
             if (IsFading)
@@ -789,6 +791,7 @@ namespace RenHoek.MusicPlayer
         {
             if (AllSongs.Count == 0) return;
             eventTriggersBlocked = false;
+            ManuallyStopped = false;
             RefreshCombatStateNow();  // Immediate refresh so UI updates
             
             // Cancel any ongoing fade or silence
@@ -838,6 +841,7 @@ namespace RenHoek.MusicPlayer
         {
             if (AllSongs.Count == 0) return;
             eventTriggersBlocked = false;
+            ManuallyStopped = false;
             RefreshCombatStateNow();  // Immediate refresh so UI updates
             
             // Cancel any ongoing silence
@@ -901,6 +905,7 @@ namespace RenHoek.MusicPlayer
         public void Stop()
         {
             pendingSong = null;
+            ManuallyStopped = true;  // Block vanilla until user manually plays
             
             // If setting enabled, block events from loading music until manual play
             if (MusicPlayerMod.Settings.BlockEventTriggers)

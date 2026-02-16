@@ -43,14 +43,18 @@ namespace RenHoek.MusicPlayer
     
     /// <summary>
     /// Prevent vanilla music manager from auto-starting songs.
+    /// Blocks when: our controller has a song playing, OR user manually stopped playback.
     /// </summary>
     [HarmonyPatch(typeof(MusicManagerPlay), "StartNewSong")]
     public static class Patch_MusicManagerPlay_StartNewSong
     {
         public static bool Prefix()
         {
-            // If our controller exists and has a song playing, skip vanilla auto-play
-            if (MusicPlayerController.Instance?.CurrentSong != null)
+            var controller = MusicPlayerController.Instance;
+            if (controller == null) return true;
+            
+            // Block vanilla if we have a song OR if user manually stopped
+            if (controller.CurrentSong != null || controller.ManuallyStopped)
             {
                 return false; // Skip original method
             }
